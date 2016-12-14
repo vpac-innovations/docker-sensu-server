@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "local-health": {
+      "command": "check-http.rb -u http://localhost:3000",
+      "standalone": true,
+      "interval": 60,
+      "refresh": 60,
+      "subscribers": [ "sensu" ]
+    }
+  }
+}
