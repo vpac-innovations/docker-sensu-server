@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "slim-seed-health": {
+      "command": "check-ports.rb -H <SEED_NODE_IP_OR_HOSTNAME> -p 2552 -P tcp",
+      "standalone": true,
+      "interval": 60,
+      "refresh": 60,
+      "subscribers": [ "sensu" ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "slim-postgres-health": {
+      "command": "check-postgres-connections.rb -u <POSTGRES_USER> -p <POSTGRES_PASSWORD> -h <POSTGRES_IP_OR_HOSTNAME> -d postgres -w 80 -c 95 --percentage",
+      "standalone": true,
+      "interval": 60,
+      "refresh": 60,
+      "subscribers": [ "sensu" ]
+    }
+  }
+}
