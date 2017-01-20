@@ -18,7 +18,7 @@ RUN useradd hiroakis \
 RUN yum install -y redis
 
 # RabbitMQ
-RUN yum install -y erlang \
+RUN rpm -Uvh https://www.rabbitmq.com/releases/erlang/erlang-18.2-1.el6.x86_64.rpm \
   && rpm --import http://www.rabbitmq.com/rabbitmq-signing-key-public.asc \
   && rpm -Uvh http://www.rabbitmq.com/releases/rabbitmq-server/v3.1.4/rabbitmq-server-3.1.4-1.noarch.rpm \
   && git clone git://github.com/joemiller/joemiller.me-intro-to-sensu.git \
