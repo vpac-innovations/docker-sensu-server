@@ -1,0 +1,9 @@
+{
+    "handlers": {
+        "handler-mailer": {
+            "type": "pipe",
+            "command": "/opt/sensu/embedded/bin/handler-mailer-ses.rb",
+            "filter" : "state_change_only"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "vmstat_metrics": {
+      "type": "metric",
+      "standalone": true,
+      "handlers": ["graphite"], 
+      "command": "/opt/sensu/embedded/bin/metrics-vmstat.rb --scheme sensu.:::name:::",
+      "interval": 10,
+      "subscribers": ["sensu"]
+    }
+  }  
+}
