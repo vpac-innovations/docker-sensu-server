@@ -1,6 +1,6 @@
 {
     "handlers": {
-        "handler-mailer": {
+        "email": {
             "type": "pipe",
             "command": "/opt/sensu/embedded/bin/handler-mailer-ses.rb",
             "filter" : "state_change_only"

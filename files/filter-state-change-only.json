@@ -1,0 +1,10 @@
+{
+  "filters": {
+    "state_change_only": {
+      "negate": false,
+      "attributes": {
+        "occurrences": "eval: value == 1 || ':::action:::' == 'resolve'"
+      }
+    }
+  }
+}

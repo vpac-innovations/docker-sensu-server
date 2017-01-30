@@ -64,6 +64,7 @@ ADD files/client-*.json /etc/sensu/conf.d/
 ADD files/mailer-*.json /etc/sensu/conf.d/
 ADD files/handler-*.json /etc/sensu/conf.d/
 ADD files/mutator-*.json /etc/sensu/conf.d/
+ADD files/filter-*.json /etc/sensu/conf.d/
 
 EXPOSE 3000
 
