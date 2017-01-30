@@ -1,0 +1,18 @@
+version: '2'
+services:
+    sensu:
+        build: .
+        ports:
+            - "3000:3000"
+        depends_on:
+            - graphite
+
+    graphite:
+        ports:
+            - "8080:80"    
+        image: nickstenning/graphite
+
+    grafana: 
+        ports:
+            - "80:3000"
+        image: grafana/grafana

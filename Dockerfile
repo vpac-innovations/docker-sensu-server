@@ -56,10 +56,14 @@ RUN /bin/bash -l -c "/opt/sensu/embedded/bin/gem install sensu-plugins-memory-ch
 RUN /bin/bash -l -c "/opt/sensu/embedded/bin/gem install sensu-plugins-postgres"
 RUN /bin/bash -l -c "/opt/sensu/embedded/bin/gem install sensu-plugins-network-checks"
 RUN /bin/bash -l -c "/opt/sensu/embedded/bin/gem install sensu-plugins-mailer aws-ses"
+RUN /bin/bash -l -c "/opt/sensu/embedded/bin/gem install sensu-plugins-graphite"
+RUN /bin/bash -l -c "/opt/sensu/embedded/bin/gem install sensu-plugins-vmstats"
 
 ADD files/check-*.json /etc/sensu/conf.d/
 ADD files/client-*.json /etc/sensu/conf.d/
 ADD files/mailer-*.json /etc/sensu/conf.d/
+ADD files/handler-*.json /etc/sensu/conf.d/
+ADD files/mutator-*.json /etc/sensu/conf.d/
 
 EXPOSE 3000
 
